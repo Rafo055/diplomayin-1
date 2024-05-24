@@ -31,6 +31,7 @@ function getCountryName(countryCode) {
 }
 
 function parsePlural(label) {
+  var s = 10;
   var sb_single = new Array("");
   var sb_plural = new Array("");
   var spaces = 0;
