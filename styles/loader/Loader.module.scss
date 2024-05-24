@@ -1,0 +1,52 @@
+div.loading_bar {
+  width: 200px;
+  height: 4px;
+  background-color: #d6cec2;
+  border-radius: 10px;
+  margin-top: 125px;
+  overflow: hidden;
+  position: relative;
+}
+div.loading_bar::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  position: absolute;
+  background-color: #0074b4;
+  transform: translateX(-20px);
+  animation: loop 2s;
+}
+@keyframes loop {
+  0%,
+  100% {
+    transform: translateX(-48px);
+  }
+  50% {
+    transform: translateX(178px);
+  }
+}
+
+//loader
+
+.loading {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 5px solid rgb(26 108 97 / 56%);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
